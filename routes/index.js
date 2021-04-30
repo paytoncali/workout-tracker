@@ -1,10 +1,9 @@
-// root routes
+const router = require('express').Router();
 
-const router = require("express").Router();
-const path = require("path");
+const apiRoutes = require('./api');
+const homeRoutes = require('./homeRoutes');
 
-router.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/index.html"))
-});
+router.use('/', homeRoutes);
+router.use('/api', apiRoutes);
 
 module.exports = router;
