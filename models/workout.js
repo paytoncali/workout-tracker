@@ -33,6 +33,9 @@ const workoutSchema = new Schema({
             distance: {
                 type: Number,
             },
+            total_duration: {
+                type: Number,
+            },
         }
     ],
 });
